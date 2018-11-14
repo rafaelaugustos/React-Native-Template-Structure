@@ -1,0 +1,3 @@
+rootProject.name = 'AppTemplateRN'
+
+include ':app'
