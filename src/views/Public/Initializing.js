@@ -12,11 +12,13 @@ class Initializing extends Component {
             const user = await AsyncStorage.getItem(USER_KEY)
             console.log(user)
 
-            if(user){
-                this.props.navigation.push('Home')
-            }else{
-                this.props.navigation.push('Auth')
-            }
+            setTimeout(() => {
+                if(user){
+                    this.props.navigation.push('Home')
+                }else{
+                    this.props.navigation.push('Auth')
+                }
+            }, 3000)
         }catch(err){
             console.log(err)
             this.props.navigation.push('Auth')
