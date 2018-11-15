@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, AsyncStorage } from 'react-native'
 
 class Home extends Component {
-    static navigationOptions = {
-
-    }
-
     render(){
         return(
             <View style={styles.Container}>
