@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, AsyncStorage } from 'react-native'
 import { USER_KEY } from '@/config'
+import GlobalStyle from '@/assets/styles'
 
 class Initializing extends Component {
     static navigationOptions = {
@@ -27,7 +28,7 @@ class Initializing extends Component {
 
     render(){
         return(
-            <View style={styles.container}>
+            <View style={GlobalStyle.Container}>
                 <Text style={styles.welcome}>Loading...</Text>
             </View>
         )
@@ -35,11 +36,6 @@ class Initializing extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
     welcome: {
         fontSize: 28
     }

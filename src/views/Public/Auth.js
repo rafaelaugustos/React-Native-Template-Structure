@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, AsyncStorage } from 'react-native'
 import { USER_KEY } from '@/config'
+import GlobalStyle from '@/assets/styles'
 
 class Home extends Component {
     static navigationOptions = {
@@ -15,7 +16,7 @@ class Home extends Component {
     render(){
         return(
             <View
-                style={styles.Container}
+                style={[GlobalStyle.Container, { padding: 10 }]}
             >
                 <TextInput 
                     style={styles.Input}
@@ -40,12 +41,6 @@ class Home extends Component {
 }
 
 const styles = StyleSheet.create({
-    Container: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
-        padding: 10
-    },
     Input: {
         backgroundColor: '#ffffff',
         height: 40,
